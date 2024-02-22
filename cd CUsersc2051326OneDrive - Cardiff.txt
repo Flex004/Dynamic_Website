@@ -1,0 +1,2 @@
+ cd "C:\Users\c2051326\OneDrive - Cardiff University\Personal_Website_CV"
+for bash

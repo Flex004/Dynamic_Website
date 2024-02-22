@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/221d185582.js" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<body>
+<header id="header">
+    <a href="#" class="logo">Fel<span>i</span>x.</a>
+    <div class="menu-container" id="menu-container">
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about" class="active">About Me</a></li>
+            <li><a href="#education" class="active">Education</a></li>
+            <li><a href="#portfolio" class="active">Portfolio</a></li>
+            <li><a href="#contact" class="active">Contact Me</a></li>
+        </ul>
+    </div>
+</header>
+<section class="home parallax" id="home">
+    <div class="home-text">
+        <div class="slide">
+            <span class="one">Hi</span>
+            <span class="two">I'm</span>
+        </div>
+        <h1>Felix</h1>
+        <h3>An MSc Computing Student.</h3>
+        <div class="button">
+            <a href="Cv (3).pdf" target="_blank" class="btn">Download CV</a>
+        </div>
+    </div>
+</section>
+
+<section class="about parallax" id="about">
+    <div class="about-text">
+        <h2>About <span>Me</span></h2>
+        <h4>Enthusiastic Computer Science Student!</h4>
+        <p>I began my MSc course in September 2023 after finishing
+            my undergraduate in English Literature and History.
+            Though this course has been challenging I have loved every minute
+            of improving my programming skills and designing projects I
+            never thought I could.
+        </p>
+        <a href="#about" class="btn">More About Me</a>
+        <p>
+        </p>
+    </div>
+</section>
+
+<section class="education parallax" id="education">
+    <div class="main-text">
+        <h2><span>My</span> Education</h2>
+    </div>
+    <div class="education-content">
+        <div class="box">
+            <h3>Cardiff University 2023-2025</h3>
+            <p>Postgraduate Degree</p>
+            <a href="#education" class="read-more-btn" onclick="toggleProjectDetails(this)"><i class='bx bx-link-external'></i> Read More</a>
+            <div class="additional-details" style="display: none;">
+                <p>Additional details about the project go here.</p>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Cardiff University 2020-2023</h3>
+            <p>Undergraduate Degree</p>
+            <a href="#education" class="read-more-btn" onclick="toggleProjectDetails(this)"><i class='bx bx-link-external'></i>Read More</a>
+            <div class="additional-details" style="display: none;">
+                <p>I completed my BA combined English Literature and History degree from Cardiff University achieving a 2:1 and finesing my critical analysis and thinking.</p>
+            </div>
+        </div>
+    </div>
+</section>    
+
+<section class="portfolio parallax" id="portfolio">
+    <div class="main-text">
+        <h2><span>My</span> Projects</h2>
+    </div>
+    <div class="portfolio-content">
+        <div class="box">
+            <h3>CMT313 - Software Engineering</h3>
+            <p>I led a team of 6 designing and eventually implementing an Automated Assessment Tool.</p>
+            <a href="#portfolio" class="read-more-btn" onclick="toggleProjectDetails(this)"><i class='bx bx-link-external'></i> Read More</a>
+            <div class="additional-details" style="display: none;">
+            <p>Additional details about the project go here.</p>
+            </div>
+        </div>
+        <div class="box">
+            <h3>CMT120 - Assessment 1</h3>
+            <p>Python and Javascript coding challenges</p>
+            <a href="https://github.com/Flex004/CMT120_Assessment1.git" target="_blank" class="read-more-btn"></i> Read More</a>
+            <div class="additional-details" style="display: none;">
+                <p>Additional details about the project go here.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xzbneqbd" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <input type="submit" value="Submit">
+    </form> 
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BbTHJ%2F10fQF6v7bQJkomY5Q%3D%3D" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Flex004" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:felix.chadwicksmith@icloud.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+    </div>          
+</section>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
